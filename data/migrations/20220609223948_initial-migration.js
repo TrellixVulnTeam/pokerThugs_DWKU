@@ -4,8 +4,7 @@ exports.up = async function(knex) {
     .createTable('users', tbl => {
         tbl.increments()
         tbl.string('username', 32).notNullable().unique()
-        tbl.string('email').notNullable().unique()
-        tbl.string('password').notNullable().unique()
+        tbl.string('password').notNullable()
     })
 };
 
